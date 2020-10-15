@@ -12,9 +12,11 @@ namespace Real_State.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Key]
+        [Display(Name ="Branch Number")]
         public string BranchNo { get; set; }
         public string Street { get; set; }
         public string City { get; set; }
+        [Display(Name = "Postal Code")]
         public string PostCode { get; set; }
 
         public virtual List<Staff> Staff{ get; set; }
