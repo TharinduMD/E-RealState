@@ -12,10 +12,14 @@ namespace Real_State.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Key]
+        [Display(Name = "Owner Number")]
         public string OwnerNo { get; set; }
+        [Display(Name = "First Name")]
         public string FName { get; set; }
+        [Display(Name = "Last Name")]
         public string LName { get; set; }
         public string Address { get; set; }
+        [Display(Name = "Telephone Number")]
         public string TelNo { get; set; }
 
         public virtual List<Rent> Rent { get; set; }
