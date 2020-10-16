@@ -13,10 +13,11 @@ namespace Real_State.Controllers
         private Real_StateContext context = new Real_StateContext();
         public ActionResult Index()
         {
-            return View();
+            List<Owner> AllOwners = context.Owners.ToList();
+            return View(AllOwners);
         }
         public ActionResult Create()
-        {
+        {    
             return View();
         }
 
