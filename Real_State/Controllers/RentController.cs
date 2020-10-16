@@ -31,7 +31,7 @@ namespace Real_State.Controllers
             ViewBag.StaffDetails = context.Staffs;
             context.Rents.Add(rent);
             context.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }
