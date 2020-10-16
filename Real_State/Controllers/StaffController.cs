@@ -13,13 +13,23 @@ namespace Real_State.Controllers
         private Real_StateContext context = new Real_StateContext();
         public ActionResult Index()
         {
-            List<Staff> staff = context.Staffs.ToList();
-            return View(staff);
+            List<Staff> Allstaffs = context.Staffs.ToList();
+            return View(Allstaffs);
         }
 
-        public ActionResult Action()
+        public ActionResult Create()
         {
+            ViewBag.BranchDetails = context.Branchs;
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Staff staff)
+        {
+            ViewBag.BranchDetails = context.Branchs;
+            context.Staffs.Add(staff);
+            context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
