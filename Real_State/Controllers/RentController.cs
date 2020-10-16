@@ -13,7 +13,8 @@ namespace Real_State.Controllers
         private Real_StateContext context = new Real_StateContext();
         public ActionResult Index()
         {
-            return View();
+            List<Rent> AllRents = context.Rents.ToList();
+            return View(AllRents);
         }
         public ActionResult Create()
         {
