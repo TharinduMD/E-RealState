@@ -1,9 +1,9 @@
-﻿namespace Real_State.Migrations
+namespace Real_State.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class MigrationOne : DbMigration
+    public partial class Migration3 : DbMigration
     {
         public override void Up()
         {

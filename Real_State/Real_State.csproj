@@ -145,9 +145,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010150508198_MigrationOne.cs" />
-    <Compile Include="Migrations\202010150508198_MigrationOne.designer.cs">
-      <DependentUpon>202010150508198_MigrationOne.cs</DependentUpon>
+    <Compile Include="Migrations\202010161922264_Migration3.cs" />
+    <Compile Include="Migrations\202010161922264_Migration3.Designer.cs">
+      <DependentUpon>202010161922264_Migration3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
@@ -164,7 +164,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Owner\Create.cshtml" />
-    <Content Include="Views\Staff\Create.cshtml" />
     <Content Include="Views\Rent\Create.cshtml" />
     <Content Include="Views\Branch\Index.cshtml" />
     <Content Include="Views\Branch\Create.cshtml" />
@@ -172,7 +171,6 @@
     <Content Include="Views\Owner\Index.cshtml" />
     <Content Include="Views\Owner\Details.cshtml" />
     <Content Include="Views\Staff\Index.cshtml" />
-    <Content Include="Views\Staff\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -184,8 +182,8 @@
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010150508198_MigrationOne.resx">
-      <DependentUpon>202010150508198_MigrationOne.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010161922264_Migration3.resx">
+      <DependentUpon>202010161922264_Migration3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

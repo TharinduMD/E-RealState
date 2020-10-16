@@ -20,8 +20,9 @@ namespace Real_State.Models
         public string LName { get; set; }
         public string Position { get; set; }
 
-        [Column(TypeName ="date")]
         [Display(Name = "Dath of Birth")]
+        [DataType(DataType.Date)]
+        [Column(TypeName ="date")]
         public DateTime DOB { get; set; }
         public int Salary { get; set; }
 
