@@ -28,5 +28,10 @@ namespace Real_State.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Details(String branchNo)
+        {
+            Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == branchNo);
+            return View(branch);
+        }
     }
 }
