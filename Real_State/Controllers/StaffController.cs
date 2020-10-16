@@ -31,5 +31,11 @@ namespace Real_State.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Details(String id)
+        {
+            Staff staff = context.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            return View(staff);
+        }
     }
 }
