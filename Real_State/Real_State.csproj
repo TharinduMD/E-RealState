@@ -164,10 +164,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Owner\Create.cshtml" />
-    <Content Include="Views\Branch\Create.cshtml" />
     <Content Include="Views\Staff\Create.cshtml" />
     <Content Include="Views\Rent\Create.cshtml" />
     <Content Include="Views\Branch\Index.cshtml" />
+    <Content Include="Views\Branch\Create.cshtml" />
     <Content Include="Views\Branch\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
