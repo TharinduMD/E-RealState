@@ -13,10 +13,11 @@ namespace Real_State.Controllers
         private Real_StateContext context = new Real_StateContext();
         public ActionResult Index()
         {
-            return View();
+            List<Owner> AllOwners = context.Owners.ToList();
+            return View(AllOwners);
         }
         public ActionResult Create()
-        {
+        {    
             return View();
         }
 
@@ -25,7 +26,13 @@ namespace Real_State.Controllers
         {
             context.Owners.Add(owner);
             context.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Details(String id)
+        {
+            Owner owner = context.Owners.SingleOrDefault(x => x.OwnerNo == id);
+            return View(owner);
         }
     }
 }
