@@ -167,6 +167,8 @@
     <Content Include="Views\Branch\Create.cshtml" />
     <Content Include="Views\Staff\Create.cshtml" />
     <Content Include="Views\Rent\Create.cshtml" />
+    <Content Include="Views\Branch\Index.cshtml" />
+    <Content Include="Views\Branch\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -175,8 +177,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Default1\" />
-    <Folder Include="Views\Default\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>

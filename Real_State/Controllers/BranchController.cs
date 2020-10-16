@@ -13,7 +13,8 @@ namespace Real_State.Controllers
         private Real_StateContext context = new Real_StateContext();
         public ActionResult Index()
         {
-            return View();
+            List<Branch> AllBranch = context.Branchs.ToList();
+            return View(AllBranch);
         }
         public ActionResult Create()
         {
@@ -25,7 +26,12 @@ namespace Real_State.Controllers
         {
             context.Branchs.Add(branch);
             context.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Details(String branchNo)
+        {
+            Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == branchNo);
+            return View(branch);
         }
     }
 }
