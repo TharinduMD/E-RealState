@@ -27,7 +27,7 @@ namespace Real_State.Controllers
             ViewBag.BranchDetails = context.Branchs;
             context.Staffs.Add(staff);
             context.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }
