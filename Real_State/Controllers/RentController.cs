@@ -33,5 +33,11 @@ namespace Real_State.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Details(String id)
+        {
+            Rent rent = context.Rents.SingleOrDefault(x => x.PropertyNo == id);
+            return View(rent);
+        }
     }
 }
