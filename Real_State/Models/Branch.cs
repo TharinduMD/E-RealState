@@ -14,6 +14,7 @@ namespace Real_State.Models
         [Key]
         [Display(Name ="Branch Number")]
         public string BranchNo { get; set; }
+        [Display(Name = "Branch Street")]
         public string Street { get; set; }
         public string City { get; set; }
         [Display(Name = "Postal Code")]

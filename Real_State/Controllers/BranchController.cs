@@ -33,5 +33,21 @@ namespace Real_State.Controllers
             Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == id);
             return View(branch);
         }
+
+        public ActionResult Edit(String id)
+        {
+            Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            return View(branch);
+        }
+        [HttpPost]
+        public ActionResult Edit(String id, Branch updatedBranch)
+        {
+            Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            branch.Street = updatedBranch.Street;
+            branch.City = updatedBranch.City;
+            branch.PostCode = updatedBranch.PostCode;
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace Real_State.Models
         [Key]
         [Display(Name = "Property Number")]
         public string PropertyNo { get; set; }
+        [Display(Name = "Property Street")]
         public string Street { get; set; }
         public string City { get; set; }
 
