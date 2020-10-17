@@ -51,5 +51,20 @@ namespace Real_State.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(String id)
+        {
+            Owner owner = context.Owners.SingleOrDefault(x => x.OwnerNo == id);
+            return View(owner);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteOwner(String id)
+        {
+            Owner owner = context.Owners.SingleOrDefault(x => x.OwnerNo == id);
+            context.Owners.Remove(owner);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
