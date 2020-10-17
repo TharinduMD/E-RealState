@@ -145,9 +145,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010161922264_Migration3.cs" />
-    <Compile Include="Migrations\202010161922264_Migration3.Designer.cs">
-      <DependentUpon>202010161922264_Migration3.cs</DependentUpon>
+    <Compile Include="Migrations\202010170355151_Migration4.cs" />
+    <Compile Include="Migrations\202010170355151_Migration4.Designer.cs">
+      <DependentUpon>202010170355151_Migration4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
@@ -186,8 +186,8 @@
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010161922264_Migration3.resx">
-      <DependentUpon>202010161922264_Migration3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010170355151_Migration4.resx">
+      <DependentUpon>202010170355151_Migration4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

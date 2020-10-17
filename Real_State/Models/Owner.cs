@@ -14,9 +14,9 @@ namespace Real_State.Models
         [Key]
         [Display(Name = "Owner Number")]
         public string OwnerNo { get; set; }
-        [Display(Name = "First Name")]
+        [Display(Name = "Owner First Name")]
         public string FName { get; set; }
-        [Display(Name = "Last Name")]
+        [Display(Name = "Owner Last Name")]
         public string LName { get; set; }
         public string Address { get; set; }
         [Display(Name = "Telephone Number")]

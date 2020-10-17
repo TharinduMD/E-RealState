@@ -14,9 +14,9 @@ namespace Real_State.Models
         [Display(Name = "Staff Number")]
         public string StaffNo { get; set; }
 
-        [Display(Name ="First Name")]
+        [Display(Name ="Staff First Name")]
         public string FName { get; set; }
-        [Display(Name = "Last Name")]
+        [Display(Name = "Staff Last Name")]
         public string LName { get; set; }
         public string Position { get; set; }
 
