@@ -59,5 +59,20 @@ namespace Real_State.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Delete(String id)
+        {
+            Staff staff = context.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            return View(staff);
+        }
+
+        [HttpPost,ActionName("Delete")]
+        public ActionResult DeleteStaff(String id)
+        {
+            Staff staff = context.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            context.Staffs.Remove(staff);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
