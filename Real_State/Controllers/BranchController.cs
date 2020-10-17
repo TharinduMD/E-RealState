@@ -49,5 +49,19 @@ namespace Real_State.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(String id)
+        {
+            Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            return View(branch);
+        }
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteBranch(String id)
+        {
+            Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            context.Branchs.Remove(branch);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
