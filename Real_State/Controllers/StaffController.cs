@@ -37,5 +37,27 @@ namespace Real_State.Controllers
             Staff staff = context.Staffs.SingleOrDefault(x => x.StaffNo == id);
             return View(staff);
         }
+
+        public ActionResult Edit(String id)
+        {
+            Staff staff = context.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            ViewBag.EditBranch = new SelectList(context.Branchs, "BranchNo", "Street");
+            return View(staff);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(String id,Staff updatedStaff)
+        {
+            Staff staff = context.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            staff.FName = updatedStaff.FName;
+            staff.LName = updatedStaff.LName;
+            staff.Position = updatedStaff.Position;
+            staff.DOB = updatedStaff.DOB;
+            staff.Salary = updatedStaff.Salary;
+            staff.Branch_BranchNoRef = updatedStaff.Branch_BranchNoRef;
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }

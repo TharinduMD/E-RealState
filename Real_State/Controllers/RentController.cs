@@ -39,5 +39,31 @@ namespace Real_State.Controllers
             Rent rent = context.Rents.SingleOrDefault(x => x.PropertyNo == id);
             return View(rent);
         }
+
+        public ActionResult Edit(String id)
+        {
+            Rent rent = context.Rents.SingleOrDefault(x => x.PropertyNo == id);
+
+            ViewBag.EditOwner = new SelectList(context.Owners, "OwnerNo", "FName");
+            ViewBag.EditStaff = new SelectList(context.Staffs, "StaffNo", "FName");
+            ViewBag.EditBranch = new SelectList(context.Branchs, "BranchNo", "Street");
+            return View(rent);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(String id,Rent UpdatedRent)
+        {
+            Rent rent = context.Rents.SingleOrDefault(x => x.PropertyNo == id);
+            rent.Street = UpdatedRent.Street;
+            rent.City = UpdatedRent.City;
+            rent.Ptype = UpdatedRent.Ptype;
+            rent.Rooms = UpdatedRent.Rooms;
+            rent.OwnerNoRef = UpdatedRent.OwnerNoRef;
+            rent.StaffNoRef = UpdatedRent.StaffNoRef;
+            rent.BranchNoRef = UpdatedRent.BranchNoRef;
+            rent.Rent1 = UpdatedRent.Rent1;
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
