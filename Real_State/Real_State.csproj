@@ -176,6 +176,7 @@
     <Content Include="Views\Rent\Index.cshtml" />
     <Content Include="Views\Rent\Details.cshtml" />
     <Content Include="Views\Branch\Edit.cshtml" />
+    <Content Include="Views\Owner\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
