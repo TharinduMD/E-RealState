@@ -34,15 +34,20 @@ namespace Real_State.Controllers
             return View(branch);
         }
 
-        public ActionResult Edit()
+        public ActionResult Edit(String id)
         {
             Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == id);
             return View(branch);
         }
         [HttpPost]
-        public ActionResult Edit()
+        public ActionResult Edit(String id, Branch updatedBranch)
         {
-            return View();
+            Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            branch.Street = updatedBranch.Street;
+            branch.City = updatedBranch.City;
+            branch.PostCode = updatedBranch.PostCode;
+            context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
