@@ -33,5 +33,16 @@ namespace Real_State.Controllers
             Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == id);
             return View(branch);
         }
+
+        public ActionResult Edit()
+        {
+            Branch branch = context.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            return View(branch);
+        }
+        [HttpPost]
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }
