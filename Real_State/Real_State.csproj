@@ -145,9 +145,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010170355151_Migration4.cs" />
-    <Compile Include="Migrations\202010170355151_Migration4.Designer.cs">
-      <DependentUpon>202010170355151_Migration4.cs</DependentUpon>
+    <Compile Include="Migrations\202010180540352_Migration7.cs" />
+    <Compile Include="Migrations\202010180540352_Migration7.Designer.cs">
+      <DependentUpon>202010180540352_Migration7.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
@@ -180,6 +180,9 @@
     <Content Include="Views\Staff\Edit.cshtml" />
     <Content Include="Views\Rent\Edit.cshtml" />
     <Content Include="Views\Branch\Delete.cshtml" />
+    <Content Include="Views\Owner\Delete.cshtml" />
+    <Content Include="Views\Staff\Delete.cshtml" />
+    <Content Include="Views\Rent\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -191,8 +194,8 @@
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010170355151_Migration4.resx">
-      <DependentUpon>202010170355151_Migration4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010180540352_Migration7.resx">
+      <DependentUpon>202010180540352_Migration7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -65,5 +65,20 @@ namespace Real_State.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(String id)
+        {
+            Rent rent = context.Rents.SingleOrDefault(x => x.PropertyNo == id);
+            return View(rent);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteStaff(String id)
+        {
+            Rent rent = context.Rents.SingleOrDefault(x => x.PropertyNo == id);
+            context.Rents.Remove(rent);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace Real_State.Models
         [Display(Name = "Dath of Birth")]
         [DataType(DataType.Date)]
         [Column(TypeName ="date")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DOB { get; set; }
         public int Salary { get; set; }
 
