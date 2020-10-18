@@ -65,7 +65,7 @@ namespace Real_State.Controllers
             return View(staff);
         }
 
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public ActionResult DeleteStaff(String id)
         {
             Staff staff = context.Staffs.SingleOrDefault(x => x.StaffNo == id);

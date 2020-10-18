@@ -100,5 +100,5 @@ C:\Users\Tharindu\Documents\Visual Studio 2015\Projects\ICAE1\ICA\E-RealState\Re
 C:\Users\Tharindu\Documents\Visual Studio 2015\Projects\ICAE1\ICA\E-RealState\Real_State\obj\Debug\Real_State.csprojResolveAssemblyReference.cache
 C:\Users\Tharindu\Documents\Visual Studio 2015\Projects\ICAE1\ICA\E-RealState\Real_State\obj\Debug\Real_State.dll
 C:\Users\Tharindu\Documents\Visual Studio 2015\Projects\ICAE1\ICA\E-RealState\Real_State\obj\Debug\Real_State.pdb
-C:\Users\Tharindu\Documents\Visual Studio 2015\Projects\ICAE1\ICA\E-RealState\Real_State\obj\Debug\Real_State.Migrations.Migration6.resources
+C:\Users\Tharindu\Documents\Visual Studio 2015\Projects\ICAE1\ICA\E-RealState\Real_State\obj\Debug\Real_State.Migrations.Migration7.resources
 C:\Users\Tharindu\Documents\Visual Studio 2015\Projects\ICAE1\ICA\E-RealState\Real_State\obj\Debug\Real_State.csproj.GenerateResource.Cache

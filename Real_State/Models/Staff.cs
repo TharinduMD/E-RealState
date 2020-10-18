@@ -24,7 +24,7 @@ namespace Real_State.Models
         [DataType(DataType.Date)]
         [Column(TypeName ="date")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime? DOB { get; set; }
+        public DateTime DOB { get; set; }
         public int Salary { get; set; }
 
         [ForeignKey("Branch")]
