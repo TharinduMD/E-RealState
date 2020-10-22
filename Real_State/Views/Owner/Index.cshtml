@@ -1,59 +1,51 @@
 ﻿@model IEnumerable<Real_State.Models.Owner>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
+<h2>Index</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TelNo)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelNo)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.OwnerNo }) |
-                @Html.ActionLink("Details", "Details", new { id=item.OwnerNo }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.OwnerNo })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelNo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelNo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OwnerNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OwnerNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OwnerNo })
+        </td>
+    </tr>
+}
+
+</table>
