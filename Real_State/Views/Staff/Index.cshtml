@@ -10,9 +10,9 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-<div>
+<div class="align-content-end">
 
-    @using (Html.BeginForm("Index", "Staff", FormMethod.Post))
+    @using (Html.BeginForm("Index", "Staff"))
     {
         @Html.DropDownList("PosDropDown", ViewBag.Position as SelectList, "Select Position")
         <input type="submit" value="Search">

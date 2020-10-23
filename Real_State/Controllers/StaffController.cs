@@ -26,12 +26,21 @@ namespace Real_State.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection form)
         {
-            //String pos1 = Request.Form["PosDropDown"].ToString();
-            
-            String pos = form["PosDropDown"].ToString();
+            List<Staff> distictPosition = context.Staffs.GroupBy(x => x.Position).Select(x => x.FirstOrDefault()).ToList();
+            ViewBag.Position = new SelectList(distictPosition, "Position", "Position");
 
-            Staff filterStaff = context.Staffs.SingleOrDefault(x => x.Position == pos);
-            return View(filterStaff);
+            String pos = form["PosDropDown"]?.ToString();
+
+            if (pos == null)
+            {
+                List<Staff> filterStaff = context.Staffs.ToList();
+                return View(filterStaff);
+            }
+            else
+            {
+                List<Staff> filterStaff = context.Staffs.Where(x => x.Position == pos).ToList();
+                return View(filterStaff);
+            }
         }
 
         public ActionResult Create()
