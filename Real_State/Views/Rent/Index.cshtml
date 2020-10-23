@@ -1,83 +1,75 @@
 ﻿@model IEnumerable<Real_State.Models.Rent>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
+<h2>Property</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Branch.Street)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Owner.FName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Staff.FName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Street)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.City)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ptype)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Rooms)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Rent1)
-            </th>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Branch.Street)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Owner.FName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Staff.FName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Street)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ptype)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rooms)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rent1)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.PropertyNo }) |
-                @Html.ActionLink("Details", "Details", new { id=item.PropertyNo }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.PropertyNo })
-            </td>
-        </tr>
-    }
-    
-    </table>
-</body>
-</html>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr class="thead-dark">
+        <th>
+            @Html.DisplayNameFor(model => model.Branch.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Staff.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rooms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rent1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Branch.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner.FName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Staff.FName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rooms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rent1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PropertyNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PropertyNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PropertyNo })
+        </td>
+    </tr>
+}
+
+</table>
