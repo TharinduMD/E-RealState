@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 namespace Real_State.Controllers
 {
@@ -13,8 +14,24 @@ namespace Real_State.Controllers
         private Real_StateContext context = new Real_StateContext();
         public ActionResult Index()
         {
+
             List<Staff> Allstaffs = context.Staffs.ToList();
+
+            List<Staff> distictPosition = context.Staffs.GroupBy(x => x.Position).Select(x => x.FirstOrDefault()).ToList();
+            ViewBag.Position = new SelectList(distictPosition, "Position", "Position");
+
             return View(Allstaffs);
+        }
+
+        [HttpPost]
+        public ActionResult Index(FormCollection form)
+        {
+            //String pos1 = Request.Form["PosDropDown"].ToString();
+            
+            String pos = form["PosDropDown"].ToString();
+
+            Staff filterStaff = context.Staffs.SingleOrDefault(x => x.Position == pos);
+            return View(filterStaff);
         }
 
         public ActionResult Create()
@@ -73,6 +90,5 @@ namespace Real_State.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
-
     }
 }
