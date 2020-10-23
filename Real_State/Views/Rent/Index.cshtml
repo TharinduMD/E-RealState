@@ -9,6 +9,17 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<div>
+
+    @using (Html.BeginForm("Index", "Rent"))
+    {
+        @Html.DropDownList("PropDropDown", ViewBag.Property as SelectList, "Select City")
+        <input type="submit" value="Search">
+    }
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
 <table class="table">
     <tr class="thead-dark">
         <th>
