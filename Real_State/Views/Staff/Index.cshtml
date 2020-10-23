@@ -17,10 +17,11 @@
         @Html.DropDownList("PosDropDown", ViewBag.Position as SelectList, "Select Position")
         <input type="submit" value="Search">
     }
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
 <table class="table">
-    <tr>
+    <tr class="thead-dark">
         <th>
             @Html.DisplayNameFor(model => model.Branch.Street)
         </th>
@@ -70,5 +71,4 @@
         </td>
     </tr>
 }
-
 </table>
