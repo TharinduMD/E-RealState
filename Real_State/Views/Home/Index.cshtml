@@ -7,28 +7,29 @@
     <h2>Home</h2>
 
     <div id="menu">
+
         @using (Html.BeginForm("Index", "Branch"))
         {
-            <input type="submit" value="Branch" class="d-block p-2 bg-primary text-white">
+            <input type="submit" value="Branch" class="btn btn-primary">
         }
 
         @using (Html.BeginForm("Index", "Owner"))
         {
-            <input type="submit" value="Owner" class="d-block p-2 bg-primary text-white">
+            <input type="submit" value="Owner" class="btn btn-primary">
         }
 
         @using (Html.BeginForm("Index", "Staff"))
         {
-            <input type="submit" value="Staff" class="d-block p-2 bg-primary text-white">
+            <input type="submit" value="Staff" class="btn btn-primary">
         }
 
         @using (Html.BeginForm("Index", "Rent"))
         {
-            <input type="submit" value="Rent" class="d-block p-2 bg-primary text-white">
+            <input type="submit" value="Rent" class="btn btn-primary">
         }
         @using (Html.BeginForm("BranchFilter", "Branch" ))
         {
-            <input type="submit" value="Count" class="d-block p-2 bg-primary text-white">
+            <input type="submit" value="Count" class="btn btn-primary">
         }
     </div>
 </div>

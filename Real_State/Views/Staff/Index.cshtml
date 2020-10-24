@@ -4,20 +4,22 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Staff</h2>
+<div class="d-flex justify-content-between">
+    <div>
+        <h2>Staff</h2>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    </div>
+    <div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-
-<div>
-
-    @using (Html.BeginForm("Index", "Staff"))
-    {
-        @Html.DropDownList("PosDropDown", ViewBag.Position as SelectList, "Select Position")
-        <input type="submit" value="Search">
-    }
-    @Html.ActionLink("Back to List", "Index")
+        @using (Html.BeginForm("Index", "Staff"))
+        {
+            @Html.DropDownList("PosDropDown", ViewBag.Position as SelectList, "Select Position")
+            <input type="submit" value="Search" class="btn btn-info">
+        }
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 </div>
 
 <table class="table">
