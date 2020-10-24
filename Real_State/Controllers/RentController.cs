@@ -42,7 +42,6 @@ namespace Real_State.Controllers
                 return View(filterProperty);
             }
         }
-
         public ActionResult Create()
         {
             ViewBag.OwnerDetails = context.Owners;
