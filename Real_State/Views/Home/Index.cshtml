@@ -4,17 +4,25 @@
 }
 
 <h2>Home</h2>
-<button>
-    @Html.ActionLink("Branch", "Index", "Branch")
-</button>
-<button>
-    @Html.ActionLink("Owner", "Index", "Owner")
-</button>
-<button>
-    @Html.ActionLink("Staff", "Index", "Staff")
-</button>
-<button>
-    @Html.ActionLink("Rent", "Index", "Rent")
-</button>
+
+@using (Html.BeginForm("Index", "Branch"))
+{
+    <input type="submit" value="Branch">
+}
+
+@using (Html.BeginForm("Index", "Owner"))
+{
+    <input type="submit" value="Owner">
+}
+
+@using (Html.BeginForm("Index", "Staff"))
+{
+    <input type="submit" value="Staff">
+}
+
+@using (Html.BeginForm("Index", "Rent"))
+{
+    <input type="submit" value="Rent">
+}
 
 

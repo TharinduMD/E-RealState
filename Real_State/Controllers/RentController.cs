@@ -14,8 +14,35 @@ namespace Real_State.Controllers
         public ActionResult Index()
         {
             List<Rent> AllRents = context.Rents.ToList();
+
+            List<Rent> distictProperty = context.Rents.GroupBy(x => x.City).Select(x => x.FirstOrDefault()).ToList();
+            ViewBag.Property = new SelectList(distictProperty, "City", "City");
+
             return View(AllRents);
         }
+
+        [HttpPost]
+        public ActionResult Index(FormCollection form)
+        {
+            List<Rent> AllRents = context.Rents.ToList();
+
+            List<Rent> distictProperty = context.Rents.GroupBy(x => x.City).Select(x => x.FirstOrDefault()).ToList();
+            ViewBag.Property = new SelectList(distictProperty, "City", "City");
+            
+            String property = form["PropDropDown"]?.ToString();
+
+            if (property == null)
+            {
+                List<Rent> filterProperty = context.Rents.ToList();
+                return View(filterProperty);
+            }
+            else
+            {
+                List<Rent> filterProperty = context.Rents.Where(x => x.City == property).ToList();
+                return View(filterProperty);
+            }
+        }
+
         public ActionResult Create()
         {
             ViewBag.OwnerDetails = context.Owners;

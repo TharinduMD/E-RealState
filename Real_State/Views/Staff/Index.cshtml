@@ -9,6 +9,17 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<div>
+
+    @using (Html.BeginForm("Index", "Staff"))
+    {
+        @Html.DropDownList("PosDropDown", ViewBag.Position as SelectList, "Select Position")
+        <input type="submit" value="Search">
+    }
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
 <table class="table">
     <tr class="thead-dark">
         <th>
@@ -32,7 +43,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Branch.Street)
@@ -53,11 +65,10 @@
             @Html.DisplayFor(modelItem => item.Salary)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StaffNo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.StaffNo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.StaffNo })
+            @Html.ActionLink("Edit", "Edit", new { id = item.StaffNo }) |
+            @Html.ActionLink("Details", "Details", new { id = item.StaffNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.StaffNo })
         </td>
     </tr>
 }
-
 </table>
