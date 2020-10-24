@@ -3,30 +3,33 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Home</h2>
+<div class="d-flex flex-column justify-content-center">
+    <h2>Home</h2>
 
-@using (Html.BeginForm("Index", "Branch"))
-{
-    <input type="submit" value="Branch">
-}
+    <div id="menu">
+        @using (Html.BeginForm("Index", "Branch"))
+        {
+            <input type="submit" value="Branch" class="d-block p-2 bg-primary text-white">
+        }
 
-@using (Html.BeginForm("Index", "Owner"))
-{
-    <input type="submit" value="Owner">
-}
+        @using (Html.BeginForm("Index", "Owner"))
+        {
+            <input type="submit" value="Owner" class="d-block p-2 bg-primary text-white">
+        }
 
-@using (Html.BeginForm("Index", "Staff"))
-{
-    <input type="submit" value="Staff">
-}
+        @using (Html.BeginForm("Index", "Staff"))
+        {
+            <input type="submit" value="Staff" class="d-block p-2 bg-primary text-white">
+        }
 
-@using (Html.BeginForm("Index", "Rent"))
-{
-    <input type="submit" value="Rent">
-}
-@using (Html.BeginForm("BranchFilter", "Branch"))
-{
-    <input type="submit" value="Count">
-}
-
+        @using (Html.BeginForm("Index", "Rent"))
+        {
+            <input type="submit" value="Rent" class="d-block p-2 bg-primary text-white">
+        }
+        @using (Html.BeginForm("BranchFilter", "Branch" ))
+        {
+            <input type="submit" value="Count" class="d-block p-2 bg-primary text-white">
+        }
+    </div>
+</div>
 

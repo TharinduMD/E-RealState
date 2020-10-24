@@ -17,6 +17,13 @@ textarea {
     max-width: 280px;
 }
 
+.child_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 footer {
     text-align: center;
 }
