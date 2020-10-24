@@ -4,20 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Property</h2>
+<div class="d-flex justify-content-between">
+    <div>
+        <h2>Property</h2>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    </div>
+    <div>
+        <div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-
-<div>
-
-    @using (Html.BeginForm("Index", "Rent"))
-    {
-        @Html.DropDownList("PropDropDown", ViewBag.Property as SelectList, "Select City")
-        <input type="submit" value="Search">
-    }
-    @Html.ActionLink("Back to List", "Index")
+            @using (Html.BeginForm("Index", "Rent"))
+            {
+                @Html.DropDownList("PropDropDown", ViewBag.Property as SelectList, "Select City",new { @class = "dropdown" })
+                <input type="submit" value="Search">
+            }
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    </div>
 </div>
 
 <table class="table">
