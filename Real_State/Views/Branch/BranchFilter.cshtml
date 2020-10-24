@@ -1,0 +1,15 @@
+﻿@model List<Real_State.Models.Branch>
+    @using Real_State.Models;
+
+@{
+    ViewBag.Title = "BranchFilter";
+}
+
+<h2>Branch</h2>
+
+<div>
+    @foreach (Branch branch in Model) {
+        @Html.ActionLink(branch.BranchNo+"  ,"+branch.Street,"Filter",new { @id = branch.BranchNo})<br>
+    }
+</div>
+

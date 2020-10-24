@@ -63,5 +63,19 @@ namespace Real_State.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult BranchFilter()
+        {
+            List<Branch> branch = context.Branchs.ToList();
+            return View(branch);
+        }
+
+        public ActionResult Filter(String id)
+        {
+            var filter = context.Rents.Where(x => x.BranchNoRef == id).ToList().Count;
+            ViewBag.branch = id;
+            ViewBag.count = filter;
+            return View();
+        }
     }
 }

@@ -17,6 +17,14 @@ textarea {
     max-width: 280px;
 }
 
+table{
+    text-align:center;
+}
+
+#menu .btn btn-primary{
+    background-color:red;
+}
+
 footer {
     text-align: center;
 }

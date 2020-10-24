@@ -3,26 +3,51 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Home</h2>
+<div class="d-flex flex-column align-items-center justify-content-center" style="height:70vh;">
+    
+    <div>
+        <h1 class="font-weight-bolder text-primary">EARA</h1>
+    </div>
+    <div>
+        <h4 class="text-info">Real-Estate E-Commerce Application</h4>
+    </div>
 
-@using (Html.BeginForm("Index", "Branch"))
-{
-    <input type="submit" value="Branch">
-}
+    <div class = "d-flex justify-content-around flex-wrap my-4">
 
-@using (Html.BeginForm("Index", "Owner"))
-{
-    <input type="submit" value="Owner">
-}
+        <div class="ml-2">
+            @using (Html.BeginForm("Index", "Branch"))
+            {
+                <input type="submit" value="Branch" class="btn btn-primary" style="width: 100px; height:100px; font-size:22px">
+            }
+        </div>
 
-@using (Html.BeginForm("Index", "Staff"))
-{
-    <input type="submit" value="Staff">
-}
+        <div class="ml-2">
+            @using (Html.BeginForm("Index", "Owner"))
+            {
+                <input type="submit" value="Owner" class="btn btn-primary" style="width: 100px; height:100px; font-size:22px">
+            }
+        </div>
 
-@using (Html.BeginForm("Index", "Rent"))
-{
-    <input type="submit" value="Rent">
-}
+        <div class="ml-2">
+            @using (Html.BeginForm("Index", "Staff"))
+            {
+                <input type="submit" value="Staff" class="btn btn-primary" style="width: 100px; height:100px;font-size:22px">
+            }
+        </div>
 
+        <div class="ml-2">
+            @using (Html.BeginForm("Index", "Rent"))
+            {
+                <input type="submit" value="Rent" class="btn btn-primary" style="width: 100px; height:100px; font-size:22px">
+            }
+        </div>
+
+        <div class="mx-2">
+            @using (Html.BeginForm("BranchFilter", "Branch"))
+            {
+                <input type="submit" value="Count" class="btn btn-primary" style="width: 100px; height:100px;font-size:22px">
+            }
+        </div>
+    </div>
+</div>
 
