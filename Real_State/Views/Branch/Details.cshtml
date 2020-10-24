@@ -8,7 +8,7 @@
 
 <div>
     <hr />
-    <dl class="dl-horizontal form-group row">
+    <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Street)
         </dt>
@@ -36,6 +36,7 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BranchNo}) |
+
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BranchNo },new {@role = "button",@class = "btn btn-primary" }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
